@@ -1,0 +1,50 @@
+.upcoming_events {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+.upcoming_events h2 {
+	text-align: left;
+	width: 100%;
+	padding-left: 50px;
+	font-family: "Sora", sans-serif;
+	font-size: 1.5rem;
+	color: #a38526;
+	border: 1px soli#a38526;
+	border-radius: 5px;
+}
+
+.events_container {
+	display: flex;
+	margin: 10px;
+	padding: 10px;
+}
+
+.events_container > div {
+	margin: 10px;
+	padding: 10px;
+	border: 1px solid grey;
+	border-radius: 5px;
+	width: 300px;
+	background-color: aliceblue;
+}
+
+.events_container > div img {
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
+	padding: auto;
+}
+
+.events_container > div h5 {
+	font-family: "Sora", sans-serif;
+	font-size: 1.2rem;
+	color: #a38526;
+}
+
+.events_container > div p {
+	font-family: "Sora", sans-serif;
+	font-size: 1rem;
+}
