@@ -1,11 +1,11 @@
 "use client";
 import React from "react";
-import styles from "./upcoming.module.css";
+import styles from "./past.module.css";
 import Image from "next/image";
 import upcoming_events from "/models/upcoming_events";
 import { useState, useEffect } from "react";
 
-const UpcomingEvents = () => {
+const PastEvents = () => {
 	const [events, setEvents] = useState([]);
 
 	useEffect(() => {
@@ -14,7 +14,7 @@ const UpcomingEvents = () => {
 
 	return (
 		<div className={styles.upcoming_events}>
-			<h2>Upcoming Events</h2>
+			<h2>Past Events</h2>
 			<div className={styles.events_container}>
 				<div className={styles.events}>
 					{events.map((event) => (
@@ -39,4 +39,4 @@ const UpcomingEvents = () => {
 	);
 };
 
-export default UpcomingEvents;
+export default PastEvents;

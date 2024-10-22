@@ -44,15 +44,12 @@
 	transition: transform 0.5s ease;
 }
 
-.card:hover {
-	transform: scale(1.05);
-}
-
 .events img {
 	width: 100%;
 	height: 300px;
 	object-fit: cover;
 	padding: auto;
+	transition: transform 0.5s ease;
 }
 
 .events h6 {
