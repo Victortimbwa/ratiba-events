@@ -16,6 +16,7 @@
 	list-style: none;
 	font-weight: 500;
 	cursor: pointer;
+	transition: color 0.3s;
 }
 
 .list li:hover {

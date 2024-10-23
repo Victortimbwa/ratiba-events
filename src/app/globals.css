@@ -5,6 +5,7 @@
 	--color-gold: #a38526;
 	--color-navy: #031f4f;
 	--color-gray: #d9d9d9;
+	--color-darkcyan: #008b8b;
 }
 
 * {
@@ -16,6 +17,7 @@
 a {
 	text-decoration: none;
 	list-style: none;
+	color: inherit;
 }
 
 body {

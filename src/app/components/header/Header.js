@@ -1,15 +1,26 @@
 import React from "react";
-import header from "./header.module.css";
+import styles from "./header.module.css";
+import Link from "next/link";
 
 const Header = () => {
 	return (
-		<div className={header.main}>
-			<ul className={header.list}>
-				<li>Home</li>
-				<li>About US</li>
-				<li>Events</li>
-				<li>Create Event</li>
-				<li>Profile</li>
+		<div className={styles.main}>
+			<ul className={styles.list}>
+				<Link href="/">
+					<li>Home</li>
+				</Link>
+				<Link href="/about-us">
+					<li>About US</li>
+				</Link>
+				<Link href="/all-events">
+					<li>Events</li>
+				</Link>
+				<Link href="/">
+					<li>Create Event</li>
+				</Link>
+				<Link href="/auth/signIn">
+					<li>Profile</li>
+				</Link>
 			</ul>
 		</div>
 	);

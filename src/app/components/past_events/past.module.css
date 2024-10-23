@@ -11,7 +11,7 @@
 	padding-left: 50px;
 	font-family: "Sora", sans-serif;
 	font-size: 1.5rem;
-	color: #a38526;
+	color: #031f4f;
 	border-radius: 5px;
 	margin: 10px 0;
 }
@@ -41,7 +41,6 @@
 	margin: 10px;
 	width: 100%;
 	color: #a38526;
-	transition: transform 0.5s ease;
 }
 
 .events img {
@@ -49,7 +48,6 @@
 	height: 300px;
 	object-fit: cover;
 	padding: auto;
-	transition: transform 0.5s ease;
 }
 
 .events h6 {
