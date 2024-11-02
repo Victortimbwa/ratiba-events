@@ -1,7 +1,14 @@
 "use client";
 import styles from "./signin.module.css";
+import { useRouter } from "next/navigation";
 
 const signIn = () => {
+	const router = useRouter();
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		router.push("/dashboard");
+	};
+
 	return (
 		<section className={styles.homelogin}>
 			<div className={styles.left}>
@@ -30,7 +37,7 @@ const signIn = () => {
 							onChange={(e) => setPassword(e.target.value)}
 						/>
 					</div>
-					<button type="submit" className="login-button">
+					<button type="submit" className="login-button" onClick={handleSubmit}>
 						Login
 					</button>
 					<p>
