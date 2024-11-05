@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 
 const signIn = () => {
 	const router = useRouter();
+
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		router.push("/dashboard");

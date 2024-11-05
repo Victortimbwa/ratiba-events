@@ -243,3 +243,9 @@ body {
 	font-family: "Poppins", sans-serif;
 	font-weight: 700;
 }
+
+.shots_right {
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+}

@@ -1,0 +1,85 @@
+.main {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+	background-color: #f9f9f9;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.form_group {
+	display: flex;
+	flex-direction: row;
+	margin-top: 10px;
+	gap: 10px;
+}
+
+.form_group label {
+	font-size: 1.2rem;
+	font-weight: 500;
+	font-family: "Poppins", sans-serif;
+	color: #031f4f;
+}
+
+.form_group input {
+	width: 100%;
+	height: 40px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 5px;
+	margin-top: 5px;
+	font-family: "Poppins", sans-serif;
+}
+
+.form_group textarea {
+	width: 100%;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 5px;
+	margin-top: 5px;
+	font-family: "Poppins", sans-serif;
+}
+
+.main button {
+	width: 50%;
+	height: 40px;
+	background-color: #008b8b;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	margin-top: 10px;
+	cursor: pointer;
+	font-family: "Poppins", sans-serif;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.main button:hover {
+	background-color: #005f5f;
+}
+
+.main button:disabled {
+	background-color: #ccc;
+	cursor: not-allowed;
+}
+
+.form {
+	width: 100%;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	border: #031f4f;
+	border-radius: 10px;
+}
+
+.form h1 {
+	font-size: 1.5rem;
+	font-weight: 500;
+	font-family: "Poppins", sans-serif;
+	color: #031f4f;
+}
