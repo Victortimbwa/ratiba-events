@@ -4,7 +4,7 @@ const Quicklinks = () => {
 	return (
 		<div className="dashboard_cards">
 			<div className="card1">
-				<h5>RSVP's</h5>
+				<h5>RSVPs</h5>
 				<span className="subtitle">9</span>
 				<div>
 					<i className="fa-solid fa-money-bill"></i>

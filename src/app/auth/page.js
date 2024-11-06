@@ -48,7 +48,7 @@ const SignIn = () => {
 						Login
 					</button>
 					<p>
-						Don't have an account? <a href="/auth">Sign Up</a>
+						Dont have an account? <a href="/auth/signup">Sign Up</a>
 					</p>
 				</form>
 			</div>
