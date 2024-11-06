@@ -2,7 +2,7 @@
 import styles from "./signin.module.css";
 import { useRouter } from "next/navigation";
 
-const signIn = () => {
+const SignIn = () => {
 	const router = useRouter();
 
 	const handleSubmit = (e) => {
@@ -50,4 +50,4 @@ const signIn = () => {
 	);
 };
 
-export default signIn;
+export default SignIn;
