@@ -18,7 +18,7 @@ const Header = () => {
 				<Link href="/">
 					<li>Create Event</li>
 				</Link>
-				<Link href="/auth/signIn">
+				<Link href="/auth">
 					<li>Profile</li>
 				</Link>
 			</ul>
