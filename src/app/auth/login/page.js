@@ -10,7 +10,7 @@ const SignIn = () => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		// Perform any necessary validation or API calls
+		// Perform any necessary validation orAPI calls
 		router.push("/dashboard");
 	};
 
