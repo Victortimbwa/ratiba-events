@@ -1,20 +1,21 @@
 "use client";
 import React from "react";
-import { Link } from "react-router-dom";
+import styles from "./signup.module.css";
 
 const SignUp = () => {
 	return (
-		<div>
-			<h1>Sign Up</h1>
-			<form>
-				<input type="text" placeholder="Enter Email" name="email" />
-				<input type="password" placeholder="Password" name="password" />
-				<input type="password" placeholder="Confirm Password" name="password" />
-				<button type="submit">Sign Up</button>
-				<p>
-					Already have an account? <Link href="/auth/signin">Sign In</Link>
-				</p>
-			</form>
+		<div className={styles.main}>
+			<div className={styles.form}>
+				<h2>Register to Ratiba</h2>
+				<form className={styles.form}>
+					<input type="text" placeholder="Enter first Name" name="firstName" />
+					<input type="text" placeholder="Enter last Name" name="lastName" />
+					<input type="text" placeholder="Enter userName" name="lastName" />
+					<input type="text" placeholder="Enter Email" name="lastName" />
+					<input type="text" placeholder="Password" name="password" />
+					<button type="submit">Sign Up</button>
+				</form>
+			</div>
 		</div>
 	);
 };
