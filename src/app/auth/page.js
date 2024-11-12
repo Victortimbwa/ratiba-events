@@ -1,17 +1,65 @@
 "use client";
 import styles from "./signin.module.css";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import React, { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const SignIn = () => {
-	const router = useRouter();
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
+	const [loading, setLoading] = useState(false);
+	const [errorMessage, setErrorMessage] = useState("");
+	const router = useRouter();
 
-	const handleSubmit = (e) => {
+	const handleSubmit = async (e) => {
 		e.preventDefault();
-		// Perform any necessary validation orAPI calls
-		router.push("/dashboard");
+
+		setLoading(true);
+		setErrorMessage("");
+
+		try {
+			const response = await fetch(
+				"https://djangoratiba-d7e3c1112f97.herokuapp.com/auth/login/",
+				{
+					method: "POST",
+					headers: {
+						Accept: "application/json",
+						"Content-Type": "application/json",
+					},
+					body: JSON.stringify({
+						email: email,
+						password: password,
+					}),
+				}
+			);
+
+			const data = await response.json();
+			if (response.ok) {
+				// Login successful
+				localStorage.setItem("accessToken", data.access);
+				localStorage.setItem("refreshToken", data.refresh);
+
+				// Show success toast message
+				toast.success("Login successful!", {
+					position: "top-center",
+					autoClose: 3000,
+				});
+
+				// Redirect to dashboard
+				setTimeout(() => {
+					router.push("../dashboard");
+				}, 3000);
+			} else {
+				// Show error message
+				setErrorMessage(
+					data.message || "Login failed. Please check your credentials."
+				);
+			}
+		} catch (error) {
+			setErrorMessage("Network error. Please try again later.");
+		}
+		setLoading(false);
 	};
 
 	return (
@@ -33,6 +81,7 @@ const SignIn = () => {
 							name="email"
 							value={email}
 							onChange={(e) => setEmail(e.target.value)}
+							required
 						/>
 					</div>
 					<div className={styles.inputbox}>
@@ -42,13 +91,19 @@ const SignIn = () => {
 							name="password"
 							value={password}
 							onChange={(e) => setPassword(e.target.value)}
+							required
 						/>
 					</div>
-					<button type="submit" className="login-button">
-						Login
+					<button type="submit" className="login-button" disabled={loading}>
+						{loading ? "Logging in..." : "Login"}
 					</button>
 					<p>
-						Dont have an account? <a href="/auth/signup">Sign Up</a>
+						<a href="/forgot-password" className={styles.link}>
+							Forgot Password?
+						</a>
+					</p>
+					<p>
+						Don't have an account? <a href="/auth/signup">Sign Up</a>
 					</p>
 				</form>
 			</div>
