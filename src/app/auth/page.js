@@ -35,10 +35,13 @@ const SignIn = () => {
 			);
 
 			const data = await response.json();
+			console.log(data);
 			if (response.ok) {
 				// Login successful
 				localStorage.setItem("accessToken", data.access);
 				localStorage.setItem("refreshToken", data.refresh);
+				localStorage.setItem("username", data.username);
+				localStorage.setItem("email", data.email);
 
 				// Show success toast message
 				toast.success("Login successful!", {

@@ -41,11 +41,14 @@ const Register = () => {
 
 			if (response.ok) {
 				// Registration was successful
-				toast.success("Registration successful! Please log in.", {
-					position: "top-center",
-					autoClose: 3000,
-				});
-				router.push("/auth"); // Adjusted to use absolute path
+				toast.success(
+					"Registration successful! Check your email to verify your account",
+					{
+						position: "top-center",
+						autoClose: 5000,
+					}
+				);
+				setTimeout(() => router.push("/auth"), 5000);
 			} else {
 				// Show error message if registration failed
 				const errorMsg = data.message || "Registration failed. Try again.";
