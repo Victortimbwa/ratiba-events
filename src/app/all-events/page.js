@@ -17,7 +17,9 @@ const AllEvents = () => {
 					throw new Error("Failed to fetch events");
 				}
 				const data = await response.json();
-				setEvents(data.results); // Sets the results array from the response to events state
+
+				// Set events directly since the API returns an array
+				setEvents(data);
 			} catch (error) {
 				console.error("Error fetching events:", error);
 			}
@@ -55,27 +57,33 @@ const AllEvents = () => {
 			<h2>All Events</h2>
 			<div className={styles.events_container}>
 				<div className={styles.events}>
-					{events.map((event) => (
-						<div key={event.id} className={styles.card}>
-							<Image
-								src={event.image || "/assets/18.jpg"} // Placeholder image if event.image is null
-								alt={event.title}
-								width={200}
-								height={200}
-								loading="lazy"
-							/>
-							<h6>{event.title}</h6>
-							<p>{event.date}</p>
-							<p>{event.time}</p>
-							<p>{event.venue}</p>
-							<p>{event.charge}</p>
-							<button
-								onClick={() => handleRSVP(event.id)}
-								className={styles.rsvp_button}>
-								RSVP
-							</button>
-						</div>
-					))}
+					{events.length > 0 ? (
+						events.map((event) => (
+							<div key={event.id} className={styles.card}>
+								<Image
+									src={
+										event.image_url || "/assets/18.jpg" // Use placeholder if image_url is null
+									}
+									alt={event.title}
+									width={200}
+									height={200}
+									loading="lazy"
+								/>
+								<h6>{event.title}</h6>
+								<p>{event.date}</p>
+								<p>{event.time}</p>
+								<p>{event.venue}</p>
+								<p>{event.charge}</p>
+								<button
+									onClick={() => handleRSVP(event.id)}
+									className={styles.rsvp_button}>
+									RSVP
+								</button>
+							</div>
+						))
+					) : (
+						<p>No events available</p>
+					)}
 				</div>
 			</div>
 		</div>

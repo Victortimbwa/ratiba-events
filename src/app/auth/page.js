@@ -45,7 +45,7 @@ const SignIn = () => {
 
 				// Show success toast message
 				toast.success("Login successful!", {
-					position: "top-center",
+					position: "right",
 					autoClose: 3000,
 				});
 
@@ -108,6 +108,7 @@ const SignIn = () => {
 					<p>
 						Don't have an account? <a href="/auth/signup">Sign Up</a>
 					</p>
+					<ToastContainer />
 				</form>
 			</div>
 		</section>
