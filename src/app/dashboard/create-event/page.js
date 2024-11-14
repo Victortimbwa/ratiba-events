@@ -4,7 +4,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import styles from "./event.module.css";
 
-const page = () => {
+const CreateEvent = () => {
 	const [title, setTitle] = useState("");
 	const [date, setDate] = useState("");
 	const [time, setTime] = useState("");
@@ -148,4 +148,4 @@ const page = () => {
 	);
 };
 
-export default page;
+export default CreateEvent;
