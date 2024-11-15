@@ -106,7 +106,7 @@ const SignIn = () => {
 						</a>
 					</p>
 					<p>
-						Don't have an account? <a href="/auth/signup">Sign Up</a>
+						Dont have an account? <a href="/auth/signup">Sign Up</a>
 					</p>
 					<ToastContainer />
 				</form>
