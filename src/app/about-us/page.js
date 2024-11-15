@@ -8,7 +8,7 @@ const AboutUs = () => {
 				<h1 className={styles.title}>About Ratiba Events</h1>
 				<p className={styles.description}>
 					Welcome to Ratiba Events, your go-to solution for planning,
-					organizing, and managing events effortlessly. Whether it's a small
+					organizing, and managing events effortlessly. Whether it is a small
 					gathering or a large celebration, our platform is designed to make
 					event planning simple and stress-free.
 				</p>
@@ -37,7 +37,7 @@ const AboutUs = () => {
 						<div className={styles.featureCard}>
 							<h3 className={styles.featureTitle}>RSVP Tracking</h3>
 							<p className={styles.featureText}>
-								Manage invitations and keep track of who has RSVP'd for your
+								Manage invitations and keep track of who has RSVP for your
 								events.
 							</p>
 						</div>
